@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/new/imgs"/>
+    <qresource prefix="/">
+        <file>icons/DB.png</file>
+        <file>icons/DW.png</file>
+        <file>icons/JB.png</file>
+        <file>icons/JW.png</file>
+        <file>icons/KB.png</file>
+        <file>icons/KW.png</file>
+        <file>icons/pB.png</file>
+        <file>icons/pW.png</file>
+        <file>icons/SB.png</file>
+        <file>icons/SW.png</file>
+        <file>icons/VB.png</file>
+        <file>icons/VW.png</file>
+        <file>icons/EMPTY.png</file>
+    </qresource>
+</RCC>
