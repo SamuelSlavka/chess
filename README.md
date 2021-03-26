@@ -1,5 +1,8 @@
 # OOP chess with QT gui
-
+#### Dependencies:
+    boost
+    g++
+    
 #### Setup:
     make all
   
