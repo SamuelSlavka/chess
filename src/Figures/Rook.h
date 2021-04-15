@@ -1,5 +1,5 @@
 #pragma once
-#include "Piece.h"
+#include "../Piece.h"
 
 ///@brief  Representation of Rook.
 class Rook : public Piece

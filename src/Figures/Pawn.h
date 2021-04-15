@@ -1,6 +1,6 @@
 #pragma once
-#include "Piece.h"
-#include "Square.h"
+#include "../Piece.h"
+#include "../Square.h"
 #include <iostream> 
 #include <list> 
 #include <vector>

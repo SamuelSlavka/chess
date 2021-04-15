@@ -5,7 +5,7 @@
 #include <QLabel>
 #include <QListWidget>
 #include "mytabpage.h"
-#include "Piece.h"
+#include "../Piece.h"
 
 ///@brief  Square in gui.
 class QtSquare : public QWidget

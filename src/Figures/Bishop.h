@@ -1,5 +1,5 @@
 #pragma once
-#include "Piece.h"
+#include "../Piece.h"
 
 ///@brief  Representation of Bishop.
 class Bishop : public Piece

@@ -3,12 +3,12 @@
 #include "Headers.h"
 #include "Square.h"
 #include "Piece.h"
-#include "Pawn.h"
-#include "Rook.h"
-#include "Knight.h"
-#include "Queen.h"
-#include "Bishop.h"
-#include "King.h"
+#include "Figures/Pawn.h"
+#include "Figures/Rook.h"
+#include "Figures/Knight.h"
+#include "Figures/Queen.h"
+#include "Figures/Bishop.h"
+#include "Figures/King.h"
 
 #include <iostream> 
 #include <array> 

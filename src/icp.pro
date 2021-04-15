@@ -25,42 +25,42 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
-    Bishop.cpp \
+    main.cpp \
+    QT/mainwindow.cpp \
     Board.cpp \
     Game.cpp \
-    King.cpp \
-    Knight.cpp \
     Log.cpp \
-    Pawn.cpp \
     Piece.cpp \
-    Queen.cpp \
-    Rook.cpp \
     Square.cpp \
-    mytabpage.cpp \
-    QtSquare.cpp
+    Figures/Bishop.cpp \
+    Figures/King.cpp \
+    Figures/Knight.cpp \
+    Figures/Pawn.cpp \
+    Figures/Queen.cpp \
+    Figures/Rook.cpp \
+    QT/mytabpage.cpp \
+    QT/QtSquare.cpp
 
 HEADERS += \
-        mainwindow.h \
-    Bishop.h \
+    QT/mainwindow.h \
+    Square.h \    
     Board.h \
     Game.h \
     Headers.h \
-    King.h \
-    Knight.h \
     Log.h \
-    Pawn.h \
     Piece.h \
-    Queen.h \
-    Rook.h \
-    Square.h \
-    mytabpage.h \
-    QtSquare.h
+    Figures/Bishop.h \
+    Figures/King.h \
+    Figures/Knight.h \    
+    Figures/Pawn.h \    
+    Figures/Queen.h \
+    Figures/Rook.h \    
+    QT/mytabpage.h \
+    QT/QtSquare.h
 
 FORMS += \
-        mainwindow.ui \
-    mytabpage.ui
+    QT/mainwindow.ui \
+    QT/mytabpage.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

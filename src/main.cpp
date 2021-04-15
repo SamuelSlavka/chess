@@ -1,9 +1,10 @@
-#include "mainwindow.h"
 #include <QApplication>
-#include "mainwindow.h"
 #include <QApplication>
-#include "Game.h"
 #include <vector> 
+
+#include "Game.h"
+#include "QT/mainwindow.h"
+#include "QT/mainwindow.h"
 
 /**
  * Main window of the application.

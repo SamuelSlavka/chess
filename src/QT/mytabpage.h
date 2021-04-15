@@ -11,7 +11,7 @@
 #include <QThread>
 
 #include <iostream>
-#include "Game.h"
+#include "../Game.h"
 #include <thread>
 #include <chrono>
 #include <mutex>

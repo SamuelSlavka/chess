@@ -1,15 +1,15 @@
 #pragma once
-#include "Piece.h"
+#include "../Piece.h"
 
-///@brief  Representation of Queen.
-class Queen : public Piece
+///@brief  Representation of King.
+class King : public Piece
 {
 private:
-    /// @brief Name of type 'S'	
-    const char CharPieceType = 'D';
-	PieceType name = QueenT;
+	/// @brief Name of type 'S'
+    const char CharPieceType = 'K';
+	PieceType name = KingT;
 public:
-		/**
+	/**
     * @brief Gets possible moves from coordinates
     * @param MoveList reference to vector of possible moves, acts as return value.
     * @param  x X coordinate of piece
@@ -17,9 +17,10 @@ public:
     */
 	void GetMoves(std::vector<Move>& MoveList, int x, int y) override;
 
-	char GetPieceType() override;
-	Queen(  std::vector<Square>& BoardPtr );
-	~Queen();
-	
+    char GetPieceType() override;
+
+	King( std::vector<Square>& BoardPtr );
+	~King();
+
 };
 
