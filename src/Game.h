@@ -2,21 +2,20 @@
 #include "Board.h"
 #include "Piece.h"
 #include "Log.h"
-#include <iostream> 
-#include <list> 
-#include <iterator> 
-
+#include <iostream>
+#include <list>
+#include <iterator>
 
 #include <boost/array.hpp>
 #include <boost/range/combine.hpp>
 #include <boost/tuple/tuple.hpp>
 #include <boost/bind.hpp>
-#include <iostream> 
-#include <array> 
+#include <iostream>
+#include <array>
 #include <vector>
 #include <map>
 #include <string>
-#include <stdlib.h> 
+#include <stdlib.h>
 #include <memory>
 
 class Log;
@@ -32,8 +31,8 @@ private:
     Board board;
     /// @brief Instance of Log.
     std::shared_ptr<Log> log;
-public:
 
+public:
     /// @brief temporary vector of possible moves from selected square.
     std::vector<Move> PossibleMoves;
 
@@ -45,14 +44,13 @@ public:
     */
     std::shared_ptr<Piece> GetPiece(int x, int y);
 
-    
     ///@brief Switches turn color.
     void SwitchTurn();
 
     ///@brief Sets white turn color.
     void SetWhiteTurn();
 
-    /// @brief Switches turn color.    
+    /// @brief Switches turn color.
     PieceColor GetTurn();
 
     ///@brief Removes moves that dont prevent check when in check.
@@ -86,24 +84,23 @@ public:
     * @brief Unmakes one move for shift l
     * @param index
     */
-    void UnMakeMove(  int index );
+    void UnMakeMove(int index);
     /**
     * @brief Makes move by index for shift r.
     * @param index
-    */    
-    void MakeMove( int index );
+    */
+    void MakeMove(int index);
 
     /**
     * @brief For testing Check and legality of move
     * @param move move
     */
-    void MakeTestMove( Move move );
+    void MakeTestMove(Move move);
     /**
     * @brief Reverses test move.
     * @param move move
     */
-    void UnMakeTestMove( Move move );
-
+    void UnMakeTestMove(Move move);
 
     /**
     * @brief Checks if Square has piece.
@@ -126,16 +123,15 @@ public:
     * @param moves vector of moves acts as return value.
     *@ param line string to parse
     */
-    bool ParseNotation( std::vector<Move>& moves,std::string line );
-    
+    bool ParseNotation(std::vector<Move> &moves, std::string line);
+
     /**
     * @brief Make opened game moves.
     * @param moves vector of moves to make.
     */
-    void MakeMovesOpen( std::vector<Move>& moves );
+    void MakeMovesOpen(std::vector<Move> &moves);
     ///@brief NEW GAME
-	void NewInit();
-
+    void NewInit();
 
     /**
     * @brief Returns Piece color.
@@ -143,7 +139,7 @@ public:
     * @param y Y cordinate for updating.
     * @return char Piece color 'w' as white 'b' as black.
     */
-    char GetPieceColor( int x, int y );
+    char GetPieceColor(int x, int y);
 
     /**
     * @brief Returns Piece type.
@@ -151,10 +147,8 @@ public:
     * @param y Y cordinate for updating.
     * @return Char type of piece.
     */
-    char GetPieceType( int x, int y );
+    char GetPieceType(int x, int y);
 
     /// @brief Returns MoveListLength.
     int MoveListLength();
-
 };
-

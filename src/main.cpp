@@ -1,6 +1,6 @@
 #include <QApplication>
 #include <QApplication>
-#include <vector> 
+#include <vector>
 
 #include "Game.h"
 #include "QT/mainwindow.h"
@@ -13,13 +13,13 @@
  * @author Samuel Slavka (xslavk02)
  */
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[])
+{
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
     return a.exec();
 }
-
 
 /*! \mainpage BlockEdior
  *

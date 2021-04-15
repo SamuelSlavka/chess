@@ -7,9 +7,8 @@
  * @author Samuel Slavka (xslavk02)
  */
 
-Square::Square(int a, int b) : x(a) , y(b) {};
+Square::Square(int a, int b) : x(a), y(b){};
 
 Square::Square() {}
 
-Square::~Square(){}
-
+Square::~Square() {}

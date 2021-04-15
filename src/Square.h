@@ -1,6 +1,6 @@
 #pragma once
 //#include "Piece.h"
-#include <stdlib.h>     /* abs */
+#include <stdlib.h> /* abs */
 #include <memory>
 
 class Piece;
@@ -10,7 +10,7 @@ class Square
 {
 private:
 	/// @brief Color of square.
-    int colour;
+	int colour;
 
 public:
 	/// @brief X axis value.
@@ -22,9 +22,7 @@ public:
 	/// @brief Flag true if used.
 	bool Used = false;
 
-
-    Square(int a, int b);
-    Square();
-    ~Square();
+	Square(int a, int b);
+	Square();
+	~Square();
 };
-

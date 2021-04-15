@@ -18,8 +18,9 @@
 
 void print();
 
-namespace Ui {
-class MyTabPage;
+namespace Ui
+{
+    class MyTabPage;
 }
 /// @brief Thread handling playback.
 class PlayThread : public QThread
@@ -29,42 +30,51 @@ class PlayThread : public QThread
     int direction = 1;
     int speed = 1;
 
-    void run() override {
-        while( direction != 0 ){
-            QThread::currentThread()->sleep( speed );
-            if (direction > 0) emit shiftr();
-            else if (direction < 0) emit shiftl();
+    void run() override
+    {
+        while (direction != 0)
+        {
+            QThread::currentThread()->sleep(speed);
+            if (direction > 0)
+                emit shiftr();
+            else if (direction < 0)
+                emit shiftl();
         };
     }
 
 public:
     /// @brief Stops playback.
-    void pause() {
+    void pause()
+    {
         direction = 0;
     }
     /// @brief Changes direction of playback.
-    void fwrd() {
+    void fwrd()
+    {
         direction = 1;
     }
     /// @brief Changes direction of playback.
-    void bkwd() {
+    void bkwd()
+    {
         direction = -1;
     }
     /// @brief Starts playback.
-    void play() {
-        if ( !direction )
+    void play()
+    {
+        if (!direction)
             direction = 1;
     }
     /// @brief Changes speed of playback.
-    void speedf( int slider ) {
+    void speedf(int slider)
+    {
         speed = (100 - slider) / 20 + 1;
     }
 
 signals:
-     /// @brief Signal to unmake move.
-     void shiftl();
-     /// @brief Signal to make move.
-     void shiftr();
+    /// @brief Signal to unmake move.
+    void shiftl();
+    /// @brief Signal to make move.
+    void shiftr();
 };
 
 ///@brief  Tab with single instance of Game.
@@ -75,16 +85,16 @@ class MyTabPage : public QWidget
 public:
     QStringListModel *model;
     /// @brief return pointer to Game.
-    Game& GetGame();
+    Game &GetGame();
     explicit MyTabPage(QWidget *parent = nullptr);
     /// @brief returns pointer to board.
-    QGridLayout& GetBoard();
+    QGridLayout &GetBoard();
     /// @brief Repaints elements on board.
     void RefreshBoard();
     ~MyTabPage();
     /// @brief Returns reference.
     /// @ return Reference to UI list.
-    QListWidget& GetList();
+    QListWidget &GetList();
     /// @brief increases index of current row.
     void IncCurrentRow();
     /// @brief  Returns index of current row.
@@ -92,10 +102,10 @@ public:
     int GetCurrentRow();
     /// @brief Unmakes move from move vector.
     /// @param multiple true if multiple shifts in row
-    void LeftShift( bool multiple );
+    void LeftShift(bool multiple);
     /// @brief  Makes move from move vector.
     /// @param multiple true if multiple shifts in row
-    void RightShift( bool multiple );
+    void RightShift(bool multiple);
     /// @brief increase index of current move.
     void IncCurrentMove();
     /// @brief  Returns index of current move.

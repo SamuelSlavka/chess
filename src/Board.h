@@ -10,12 +10,12 @@
 #include "Figures/Bishop.h"
 #include "Figures/King.h"
 
-#include <iostream> 
-#include <array> 
+#include <iostream>
+#include <array>
 #include <vector>
 #include <map>
 #include <string>
-#include <stdlib.h> 
+#include <stdlib.h>
 #include <memory>
 
 #include <boost/array.hpp>
@@ -24,13 +24,13 @@
 #include <boost/bind.hpp>
 
 ///@brief  Game Board with 64 Squares.
-class Board 
+class Board
 {
-private: 
+private:
     /// @brief Pointer to Square with White King
-    Square* WhiteKing;
+    Square *WhiteKing;
     /// @brief Pointer to Square with Black King
-    Square* BlackKing;
+    Square *BlackKing;
 
     /// @brief coonst value 8 width of board
     const int BOARDWIDTH{8};
@@ -39,20 +39,20 @@ private:
 
 public:
     /// @brief Vector containing Squares forming board.
-	std::vector<Square> board;
+    std::vector<Square> board;
 
     /**
     * @brief Initialize new Board.
     */
-	int StartInitBoard();
-	
+    int StartInitBoard();
+
     /**
     * @brief Removes piece from Board.
     * @param piece Pointer to input Piece object.
     * @return int Value of piece.
     */
-	int RemovePiece(Piece *piece);
-    
+    int RemovePiece(Piece *piece);
+
     /**
     * @brief Sets Piece on Board.
     * @param value Type of  piece.
@@ -60,20 +60,19 @@ public:
     * @param  y Y coordinate of piece.
     * @return int Value of piece.
     */
-	int SetPiece(int value, int x, int y);
-     
+    int SetPiece(int value, int x, int y);
+
     /**
     * @brief Moves Piece on Board.
     * @param move Reference to move structure.
     */
-	void MovePiece(Move& move);
+    void MovePiece(Move &move);
 
     /**
     * @brief Reverses move.
     * @param move Reference to move structure.
     */
-    void UnMovePiece(Move& move);
-
+    void UnMovePiece(Move &move);
 
     /**
     * @brief Checks if move causes check.
@@ -86,7 +85,7 @@ public:
     * @param y Coordinate y.
     * @return true if x,y at board.
     */
-    bool CheckBounds( int x, int y);
+    bool CheckBounds(int x, int y);
 
     /**
     * @brief Return pointer to Square in board.
@@ -94,14 +93,14 @@ public:
     * @param y Coordinate y.
     * @return Pointer to Square
     */
-	Square GetSquare(int x, int y);
+    Square GetSquare(int x, int y);
 
     /**
     * @brief Moves Kings.
     * @param un True if reversing move false if regular move.
     * @param move Reference to Move.
     */
-    void UpdateKing(bool un, Move& move );
+    void UpdateKing(bool un, Move &move);
 
     /**
     * @brief Sets Kings special pointer.
@@ -109,9 +108,8 @@ public:
     * @param x X cordinate for updating.
     * @param y Y cordinate for updating.
     */
-    void SetKing( PieceColor turn , int x, int y );
+    void SetKing(PieceColor turn, int x, int y);
 
-	Board();
-	~Board();
+    Board();
+    ~Board();
 };
-

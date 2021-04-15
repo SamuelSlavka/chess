@@ -7,30 +7,35 @@
  * @author Samuel Slavka (xslavk02)
  */
 
-bool Piece::CheckBounds( int x, int y) const {
-    return (x < 8 && y < 8 && x >= 0 && y >= 0);
+bool Piece::CheckBounds(int x, int y) const
+{
+	return (x < 8 && y < 8 && x >= 0 && y >= 0);
 };
 
-PieceColor Piece::GetColour() const {
+PieceColor Piece::GetColour() const
+{
 	return color;
 };
 
-void Piece::SetColour( PieceColor col ) {
+void Piece::SetColour(PieceColor col)
+{
 	color = col;
 };
 
-const std::vector<Square>& Piece::GetBoard() const {
+const std::vector<Square> &Piece::GetBoard() const
+{
 	return board;
 };
 
-const Piece& Piece::GetPiece( int x, int y) const {
-	return *(GetBoard()[x+y*8].piece);
+const Piece &Piece::GetPiece(int x, int y) const
+{
+	return *(GetBoard()[x + y * 8].piece);
 };
 
-const Square& Piece::GetSquare( int x, int y) const {
-	return GetBoard()[x+y*8];
+const Square &Piece::GetSquare(int x, int y) const
+{
+	return GetBoard()[x + y * 8];
 };
-
 
 Move Piece::SetMove(int fromx, int fromy, int tox, int toy, bool removes)
 {
@@ -39,12 +44,11 @@ Move Piece::SetMove(int fromx, int fromy, int tox, int toy, bool removes)
 	move.FromY = fromy;
 	move.ToX = tox;
 	move.ToY = toy;
-	move.Moved = GetBoard()[fromx+fromy*8].piece;
-	if (removes) move.Removed = GetBoard()[tox+toy*8].piece;
-    move.Removes = removes;
+	move.Moved = GetBoard()[fromx + fromy * 8].piece;
+	if (removes)
+		move.Removed = GetBoard()[tox + toy * 8].piece;
+	move.Removes = removes;
 	return move;
 };
 
-
-Piece::Piece( std::vector<Square>& BoardPtr ) : board(BoardPtr) {};
-
+Piece::Piece(std::vector<Square> &BoardPtr) : board(BoardPtr){};

@@ -11,7 +11,8 @@
 #include <QTextStream>
 #include <QMessageBox>
 
-namespace Ui {
+namespace Ui
+{
     class MainWindow;
 }
 
@@ -22,7 +23,7 @@ class MainWindow : public QMainWindow
 
 public:
     /// @brief Returns pointer to current tab
-    MyTabPage* GetCurrentTab();
+    MyTabPage *GetCurrentTab();
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
