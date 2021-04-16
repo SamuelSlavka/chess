@@ -1,4 +1,4 @@
-# OOP chess with QT gui
+# Chess with QT gui
 #### Dependencies:
     boost
     g++
